@@ -11,4 +11,7 @@ const db = pgp({
     password: process.env.DB_PASSWORD,
 })
 
+// console.log(db);
+
+
 export default db;

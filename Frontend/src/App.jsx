@@ -1,21 +1,21 @@
-import {
-  createBrowserRouter,
-  Link,
-  Outlet,
-} from "react-router-dom";
+import { createBrowserRouter, Link, Outlet } from "react-router-dom";
+
+import Navbar from "./Navbar";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function Layout() {
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link> |{" "}
+      {/* <nav>
+        <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
         <Link to="/contact">Contact</Link>
-      </nav>
+      </nav> */}
+      <Navbar />
 
       <hr />
 
@@ -41,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
